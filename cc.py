@@ -62,7 +62,7 @@ def cc(input, identify_icebergs=False, mask_grounded=1):
                 if r > 0 and image[r-1,c] > 0:
                     run_union(int(image[r-1,c]), run_number)
 
-                # if a run if known as "floating" and the current pixel is "grounded", mark
+                # if a run is known as "floating" and the current pixel is "grounded", mark
                 # the whole run as "grounded"
                 if mask[run_number] == 0 and image[r,c] == mask_grounded:
                     mask[run_number] = 1
